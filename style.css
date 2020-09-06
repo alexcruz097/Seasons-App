@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+
+}
+
+body {
+    background-color: #dce6eb;
+  min-height: 100vh;
+}
+/* title and icons */
+#nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px ;
+  font-size: 40px;
+  color: #0E86D4;
+
+}
+#title {
+    font-size: 40px;
+margin-bottom: 42px;
+font-size: 40px;
+margin-left: 40%;
+color: #0E86D4;
+
+}
+
+i{
+    margin: 0px 20px;
+    color: rgb(146, 135, 135);
+
+
+}
+.moveIcon {
+  
+    transition: transform 1s ease-in-out;
+    transform-origin: bottom left;
+    transform: rotate(1turn);
+}
+
+/* container */
+.seasons {
+    display: flex;
+    flex-direction: row;
+ justify-content: center;
+ align-items: center;
+    flex-wrap: wrap;
+
+}
+/* cards */
+.card {
+    position: relative;
+   border: 1px solid #5f8ea5;
+    margin: 6px;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+transition: transform 1s;
+
+}
+.card:hover{
+transform: scale(1.02);
+
+}
+
+.card img {
+    max-width: 600px;
+    max-height: 400px;
+    
+    object-fit: cover;
+    transition: opacity 1.4s;
+}
+/* text in card */
+.text-block {
+color: black;
+    font-size: 22px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 1s cubic-bezier(.48,-0.63,.71,1.66);
+    transform: translateX(200%);
+}
+.fun-fact{
+  
+    font-size: 22px;
+    width: 50%;
+    height: 50%;
+    margin: 60% auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 1.5s cubic-bezier(.48,-0.63,.71,1.66);
+  transform : translateX(200%)
+}
+
+p #fact {
+    color: rgb(7, 216, 188);;
+    font-size: bold;
+    text-decoration: underline;
+}
+p{
+    color: rgb(41, 40, 40);
+    
+}
+/* effects of cards text */
+.winter:hover .text-block,
+.spring:hover .text-block,
+.summer:hover .text-block,
+.fall:hover .text-block,
+.winter:hover .fun-fact,
+.spring:hover .fun-fact,
+.summer:hover .fun-fact,
+.fall:hover .fun-fact  {
+    overflow: visible;
+    transform: translate(0);
+
+ 
+}
+/* make image opacity when hover */
+.winter:hover img,
+.spring:hover img,
+.summer:hover img,
+.fall:hover img{
+
+    opacity: 0.2;
+} 
+/* transform winter and spring */
+.spring .text-block,
+.spring .fun-fact{
+
+    transform: translateX(-200%);
+    }
+
+
+/* Translate summer and fall */
+
+.summer .text-block,
+.summer .fun-fact{
+    transform: translateY(-200%);
+    }
+.fall .text-block,
+.fall .fun-fact{
+    transform: translateY(200%);
+}
